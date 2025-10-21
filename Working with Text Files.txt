@@ -1,0 +1,36 @@
+[ec2-user@ip-172-31-14-22 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-14-22 ~]$ touch list.txt
+[ec2-user@ip-172-31-14-22 ~]$ cat list.txt
+[ec2-user@ip-172-31-14-22 ~]$ cat > list.txt << eof f1 
+[ec2-user@ip-172-31-14-22 ~]$  echo -e " apple/bannana/mago/grapes/pappaya " > list.txt
+[ec2-user@ip-172-31-14-22 ~]$ cat list.txt
+ apple/bannana/mago/grapes/pappaya 
+[ec2-user@ip-172-31-14-22 ~]$ echo  " watermelon" >> list.txt
+[ec2-user@ip-172-31-14-22 ~]$ echo  " muskmelon" >> list.txt
+[ec2-user@ip-172-31-14-22 ~]$ cat list.txt
+ apple/bannana/mago/grapes/pappaya 
+ watermelon
+ muskmelon
+[ec2-user@ip-172-31-14-22 ~]$ head -n 2 list.txt
+ apple/bannana/mago/grapes/pappaya 
+ watermelon
+[ec2-user@ip-172-31-14-22 ~]$ tail -n 2 list.txt
+ watermelon
+ muskmelon
+[ec2-user@ip-172-31-14-22 ~]$ head -n 2 list.txt
+ apple/bannana/mago/grapes/pappaya 
+ watermelon
+[ec2-user@ip-172-31-14-22 ~]$ wc -l list.txt
+3 list.txt
+[ec2-user@ip-172-31-14-22 ~]$ sort list.txt
+ apple/bannana/mago/grapes/pappaya 
+ muskmelon
+ watermelon
+[ec2-user@ip-172-31-14-22 ~]$ uniq list.txt
+ apple/bannana/mago/grapes/pappaya 
+ watermelon
+ muskmelon
+[ec2-user@ip-172-31-14-22 ~]$ sort list.txt | uniq > temp.txt && mv temp.txt list.txt
+[ec2-user@ip-172-31-14-22 ~]$ wc -w -m list.txt
+ 3 59 list.txt
