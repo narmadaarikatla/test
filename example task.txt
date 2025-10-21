@@ -1,0 +1,31 @@
+[ec2-user@ip-172-31-14-22 mydir]$ pwd
+/home/ec2-user/mydir
+[ec2-user@ip-172-31-14-22 mydir]$ ls 
+[ec2-user@ip-172-31-14-22 mydir]$ touch narmada.txt
+[ec2-user@ip-172-31-14-22 mydir]$ cp narmada.txt
+cp: missing destination file operand after 'narmada.txt'
+Try 'cp --help' for more information.
+[ec2-user@ip-172-31-14-22 mydir]$ mkdir backup
+[ec2-user@ip-172-31-14-22 mydir]$ cd backup
+[ec2-user@ip-172-31-14-22 backup]$ cd ..
+[ec2-user@ip-172-31-14-22 mydir]$ cp -r narmada.txt /home/ec2-user/mydir/backup/
+[ec2-user@ip-172-31-14-22 mydir]$ cd backup
+[ec2-user@ip-172-31-14-22 backup]$ ls 
+narmada.txt
+[ec2-user@ip-172-31-14-22 backup]$ mv narmada.txt devops.txt
+[ec2-user@ip-172-31-14-22 backup]$ ls 
+devops.txt
+[ec2-user@ip-172-31-14-22 backup]$ cd ..
+[ec2-user@ip-172-31-14-22 mydir]$ rm -r mydir
+rm: cannot remove 'mydir': No such file or directory
+[ec2-user@ip-172-31-14-22 mydir]$ cd 
+[ec2-user@ip-172-31-14-22 ~]$ rm -r mydir
+[ec2-user@ip-172-31-14-22 ~]$ ls
+maya  my_project  practice
+[ec2-user@ip-172-31-14-22 ~]$ sudo yum tree installation
+No such command: tree. Please use /usr/bin/yum --help
+It could be a YUM plugin command, try: "yum install 'dnf-command(tree)'"
+[ec2-user@ip-172-31-14-22 ~]$ sudo yum tree install
+No such command: tree. Please use /usr/bin/yum --help
+It could be a YUM plugin command, try: "yum install 'dnf-command(tree)'"
+[ec2-user@ip-172-31-14-22 ~]$ 

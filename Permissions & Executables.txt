@@ -1,0 +1,11 @@
+[ec2-user@ip-172-31-14-22 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-14-22 ~]$  echo 'echo "Hello, Linux!"' > hello.s
+[ec2-user@ip-172-31-14-22 ~]$ chmod +x hello.s
+[ec2-user@ip-172-31-14-22 ~]$ ls -l hello.s
+-rwxr-xr-x. 1 ec2-user ec2-user 21 Jun 20 14:18 hello.s
+[ec2-user@ip-172-31-14-22 ~]$ chmod a+x hello.s
+[ec2-user@ip-172-31-14-22 ~]$ chmod -w hello.s
+[ec2-user@ip-172-31-14-22 ~]$ ls -l hello.s
+-r-xr-xr-x. 1 ec2-user ec2-user 21 Jun 20 14:18 hello.s
+[ec2-user@ip-172-31-14-22 ~]$ 
