@@ -1,0 +1,50 @@
+[ec2-user@ip-172-31-14-22 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-14-22 ~]$ touch log.txt
+[ec2-user@ip-172-31-14-22 ~]$ echo -e " warning ,success , error " log.txt
+ warning ,success , error  log.txt
+[ec2-user@ip-172-31-14-22 ~]$ cat log.txt
+[ec2-user@ip-172-31-14-22 ~]$ echo -e " warning ,success , error " > log.txt
+[ec2-user@ip-172-31-14-22 ~]$ cat log.txt
+ warning ,success , error 
+[ec2-user@ip-172-31-14-22 ~]$ grep - i log.txt
+grep: i: No such file or directory
+[ec2-user@ip-172-31-14-22 ~]$ grep -i log.txt
+   ^C
+[ec2-user@ip-172-31-14-22 ~]$ grep " error " log.txt 
+ warning ,success , error 
+[ec2-user@ip-172-31-14-22 ~]$ grep -i " warning " log.txt
+ warning ,success , error 
+[ec2-user@ip-172-31-14-22 ~]$ grep -n " success " log.txt
+[ec2-user@ip-172-31-14-22 ~]$ grep -v " debug " log.txt
+ warning ,success , error 
+[ec2-user@ip-172-31-14-22 ~]$ find . -maxdepth 1 -type f -name "*.txt"
+./lists.txt
+./list.txt
+./log.txt
+[ec2-user@ip-172-31-14-22 ~]$ find . -maxdepth 1 -type f -name "*log.txt"
+./log.txt
+[ec2-user@ip-172-31-14-22 ~]$ find . -type f -size +500k
+[ec2-user@ip-172-31-14-22 ~]$ find . -maxdepth 1 -type f -empty
+./maya
+./,
+./item1
+./item2
+./item3
+./item4
+./item5
+./item6
+./item7
+./lists.txt
+./apple
+./bannana
+./garpes
+./mango
+./pappaya
+./1
+./2
+./3
+./4
+./5
+[ec2-user@ip-172-31-14-22 ~]$ grep -r "user" --include="*.conf" .
+[ec2-user@ip-172-31-14-22 ~]$ grep "^[A-Z]" log.txt
